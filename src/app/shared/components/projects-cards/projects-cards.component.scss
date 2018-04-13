@@ -1,0 +1,54 @@
+@import "~sass/lib";
+
+:host {
+  @extend %app-defaults;
+
+  justify-content: center;
+  flex-flow: row wrap;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  @include media-medium() {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .github-alternative {
+    justify-content: center;
+    text-align: center;
+    background-color: colorSecondary();
+    border-radius: 3px;
+    padding: 20px;
+
+    @include media-mobile() {
+      border-radius: 0;
+    }
+
+    h2 {
+      color: colorForegroundInverted();
+      padding-right: 15%;
+      padding-left: 15%;
+
+      @include media-mobile() {
+        padding: 0;
+        font-size: 1em;
+      }
+    }
+    p {
+      margin-top: 10px;
+      color: colorAccent();
+      font-size: .85em;
+
+      @include media-mobile() {
+        font-size: .5em;
+      }
+    }
+  }
+
+}
